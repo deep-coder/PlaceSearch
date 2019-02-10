@@ -36,16 +36,8 @@ class MapRenderer extends React.Component {
   createMarker = (markers, place, bounds, infoWindow) => {
     const { markerZoom } = this.props;
     const { renderInfoContent, map } = this;
-    let icon = {
-      url: place.icon,
-      size: new google.maps.Size(71, 71),
-      origin: new google.maps.Point(0, 0),
-      anchor: new google.maps.Point(17, 34),
-      scaledSize: new google.maps.Size(20, 20)
-    };
     let marker = new google.maps.Marker({
       map: map,
-      //icon: icon,
       title: place.name,
       position: place.geometry.location
     });
